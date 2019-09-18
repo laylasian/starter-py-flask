@@ -1,0 +1,14 @@
+version: "3"
+services:
+  server:
+    container_name: flask
+    build: .
+    ports: ['5000:5000']
+    volumes: ['.:/usr/src/app']
+    restart: always
+    environment:
+      ENV: DEVELOPMENT
+      DB_USERNAME: rootisagr8name
+      DB_PASSWORD: whozat
+      DB_DATABASE: dataz
+      DB_HOST: summat
